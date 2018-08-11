@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { HeroesModule } from './modules/heroes/heroes.module';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found.component/page-not-found.component';
+import { HeaderComponent } from './core/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
