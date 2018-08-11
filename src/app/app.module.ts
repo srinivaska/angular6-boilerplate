@@ -5,15 +5,18 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
 import { HeroesModule } from './modules/heroes/heroes.module';
 import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './shared/components/page-not-found.component/page-not-found.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HeroesModule
+    HeroesModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

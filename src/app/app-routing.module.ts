@@ -1,12 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-
-//import { HeroComponent } from './modules/heroes/components/heroes.component';
-
+import { HeroesComponent } from './modules/heroes/components/heroes.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found.component/page-not-found.component';
 
 const routes: Routes = [
-  {path: '', loadChildren: './modules/heroes/heroes.module#HeroesModule'},
- 
+  {path: '', component: HeroesComponent },
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
