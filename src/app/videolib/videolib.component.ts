@@ -1,32 +1,33 @@
-import { Component, OnInit, OnDestroy, ElementRef, Input, AfterViewInit } from '@angular/core';
-declare var videojs: any;
+
+import { Component, AfterViewInit, Input } from '@angular/core';
+import videojs from 'video.js';
+
 
 @Component({
   selector: 'app-videolib',
   templateUrl: './videolib.component.html',
   styleUrls: ['./videolib.component.css']
 })
-export class VideolibComponent implements OnInit, AfterViewInit, OnDestroy {
+export class VideolibComponent implements AfterViewInit {
  
-  // declare player var
-  private videoJSplayer: any;
+  public vjs: videojs.Player;
+  @Input() urlVideo: string;
+  @Input() urlPoster: string;
 
   constructor() {}
 
-  ngOnInit() {}
 
-  ngAfterViewInit(): void {
-    this.initVideoJs();
-  }
+  ngAfterViewInit() {
+    const options = {
+      'sources' : [{
+        'src' : 'https://ia800209.us.archive.org/24/items/WildlifeSampleVideo/Wildlife.mp4',
+        'type' : 'video/mp4'
+        }
+      ],
+      'poster' : this.urlPoster
+    };
+    this.vjs = videojs('my-player', options);
 
-  initVideoJs() {
-    this.videoJSplayer = videojs('video_player');
-    // const transcript = this.videoJSplayer.transcript();
-    // const transcriptCon = document.querySelector('#transcriptContainer');
-    // transcriptCon.appendChild(transcript.el());
-  }
-
-  ngOnDestroy() {
-    this.videoJSplayer.dispose();
   }
 }
+
