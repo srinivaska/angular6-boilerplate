@@ -9,7 +9,8 @@
     "test": "ng test",
     "build": "ng build --prod",
     "e2e": "ng e2e",
-    "ng": "ng"
+    "ng": "ng",
+    "component": "ng generate component videolib1 app/shared/components"
   },
   "keywords": [],
   "author": "",
@@ -25,10 +26,12 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
     "@angular/upgrade": "^6.0.0",
+    "@types/videojs": "^5.16.2",
     "angular-in-memory-web-api": "^0.6.0",
     "core-js": "^2.5.4",
     "ngx-bootstrap": "^3.0.1",
     "rxjs": "^6.0.0",
+    "video.js": "^7.3.0",
     "zone.js": "^0.8.24"
   },
   "devDependencies": {
