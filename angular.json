@@ -29,10 +29,13 @@
               }
             ],
             "styles": [
-              "./node_modules/video.js/dist/video-js.min.css"
+              "./node_modules/video.js/dist/video-js.min.css",
+              "./node_modules/videojs-chromecast/dist/videojs.chromecast.css"
             ],
             "scripts": [
-              "./node_modules/video.js/dist/video.min.js"
+              "./node_modules/video.js/dist/video.min.js",
+              "./node_modules/videojs-playlist/dist/videojs-playlist.min.js",
+              "./node_modules/videojs-chromecast/dist/videojs-chromecast.js"
             ]
           },
           "configurations": {

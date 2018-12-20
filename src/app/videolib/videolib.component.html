@@ -1,13 +1,29 @@
-<p>
-  videolib works!
-</p>
-
-<video id="my-player" class="video-js" controls preload="auto">
-  <p class="vjs-no-js">  
-    To view this video please enable JavaScript, and consider upgrading to a
-    web browser that
-    <a href="http://videojs.com/html5-video-support/" target="_blank">
-      supports HTML5 video
-    </a>
-  </p>
-</video>  
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-8">
+      <video
+        id="my-player"
+        class="video-js vjs-default-skin"
+        data-setup="{&quot;fluid&quot;: true}"
+        controls
+        preload="auto"
+      >
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to
+          a web browser that
+          <a href="http://videojs.com/html5-video-support/" target="_blank">
+            supports HTML5 video
+          </a>
+        </p>
+      </video>
+    </div>
+    <div class="col-4">
+      <ul style="list-style-type: none;">
+        <li  style="cursor: pointer;" class = "mt-3" *ngFor="let list of playlist; let i = index" (click)="onClick(i)">
+          <span> <img src="{{ list.poster }}" style="width:100px" /> </span>
+          {{ i }} {{list.title}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
