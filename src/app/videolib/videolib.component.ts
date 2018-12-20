@@ -1,4 +1,3 @@
-
 import { Component, AfterViewInit, Input } from '@angular/core';
 import videojs from 'video.js';
 import videojsplay from 'videojs-playlist';
@@ -15,8 +14,7 @@ export class VideolibComponent implements AfterViewInit {
  
   public vjs: videojs.Player;
   public playlist: any;
-  @Input() urlVideo: string;
-  @Input() urlPoster: string;
+  public currentIndex = "0";
 
   constructor() {
     
@@ -77,6 +75,7 @@ export class VideolibComponent implements AfterViewInit {
   onClick(index) {
     console.log(index);
     this.vjs.playlist.currentItem(index);
+    this.currentIndex = index;
   }
 }
 

@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found.component/page-not-found.component';
 import { HeaderComponent } from './core/header/header.component';
 import { VideolibComponent } from './videolib/videolib.component';
+import { VideolibChildComponent } from './videolib/videolibchild.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { VideolibComponent } from './videolib/videolib.component';
     AppComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    VideolibComponent
+    VideolibComponent,
+    VideolibChildComponent
   ],
   imports: [
     BrowserModule,
